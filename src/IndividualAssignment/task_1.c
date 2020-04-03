@@ -1,3 +1,9 @@
+/**
+ * 
+ * Written by Sukhrobbek Ilyosbekov
+ * Source code available in https://github.com/suxrobGM/CCourseworkAssignments
+ * 
+ **/
 #include "base_functions.h"
 #include "order.h"
 #include "vector.h"
@@ -17,7 +23,7 @@ bool is_continue_ordering;
 void input_name_IC() 
 {
     INPUT_NAME_AGAIN: printf("Please enter your name: ");
-
+     
     fflush(stdin);
     gets(customer_name);
 
@@ -76,10 +82,9 @@ void show_item(Order current_order)
         display_error_message("Invalid value, the input is NOT INTEGER value, please try again");
         goto INPUT_DISTANCE_AGAIN;
     }
-    
-    // TODO 
+     
     Order* copied_order = (Order*)malloc(sizeof(Order));
-    copy_order(copied_order, &current_order);
+    order_copy(copied_order, &current_order);
     vector_add(&orders, copied_order);
 }
 
@@ -159,11 +164,11 @@ void show_receipt()
         subtotal += get_subtotal(order);
     }
 
-    float sst = subtotal * 0.02f;
+    float sst = subtotal * 0.08f;
     float grand_total = subtotal + sst;
 
     printf("\nSubtotal: RM %.2f\n", subtotal);
-    printf("SST: RM %.2f\n", sst);
+    printf("GST (8%%): RM %.2f\n", sst);
     printf("Grand Total: RM %.2f\n", grand_total);
     puts("\n\t\tPlease enjoy your laptop!");
     puts("-----------------------------------------------------------------------\n");
@@ -215,7 +220,7 @@ void run_program()
             {
                 case 1: 
                 {
-                    Order current_order = create_order("Acer", 1700.0f, 5.0f, 1);
+                    Order current_order = order_create("Acer", 1700.0f, 5.0f, 1);
                     show_item(current_order);
                     show_subtotal();
 
@@ -227,7 +232,7 @@ void run_program()
                 }
                 case 2: 
                 {
-                    Order current_order = create_order("HP", 2500.0f, 0, 1);
+                    Order current_order = order_create("HP", 2500.0f, 0, 1);
                     show_item(current_order);
                     show_subtotal();
 
@@ -239,7 +244,7 @@ void run_program()
                 }
                 case 3: 
                 {
-                    Order current_order = create_order("Dell", 2450.0f, 5.0f, 1);
+                    Order current_order = order_create("Dell", 2450.0f, 5.0f, 1);
                     show_item(current_order);
                     show_subtotal();
 
@@ -251,7 +256,7 @@ void run_program()
                 }
                 case 4: 
                 {
-                    Order current_order = create_order("Lenovo", 1800.0f, 10.0f, 1);
+                    Order current_order = order_create("Lenovo", 1800.0f, 10.0f, 1);
                     show_item(current_order);
                     show_subtotal();
 
@@ -263,7 +268,7 @@ void run_program()
                 }
                 case 5: 
                 {
-                    Order current_order = create_order("Toshiba", 1500.0f, 0, 1);
+                    Order current_order = order_create("Toshiba", 1500.0f, 0, 1);
                     show_item(current_order);
                     show_subtotal();
 
@@ -275,7 +280,7 @@ void run_program()
                 }
                 case 6: 
                 {
-                    Order current_order = create_order("Sony", 2200.0f, 5.0f, 1);
+                    Order current_order = order_create("Sony", 2200.0f, 5.0f, 1);
                     show_item(current_order);
                     show_subtotal();
 

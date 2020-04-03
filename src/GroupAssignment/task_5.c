@@ -1,3 +1,9 @@
+/**
+ * 
+ * Written by Sukhrobbek Ilyosbekov
+ * Source code available in https://github.com/suxrobGM/CCourseworkAssignments
+ * 
+ **/
 #include <stdio.h>
 
 int main()

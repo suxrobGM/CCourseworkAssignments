@@ -1,3 +1,9 @@
+/**
+ * 
+ * Written by Sukhrobbek Ilyosbekov
+ * Source code available in https://github.com/suxrobGM/CCourseworkAssignments
+ * 
+ **/
 #ifndef ORDER_H
 #define ORDER_H
 
@@ -9,7 +15,7 @@ typedef struct Order {
 
 } Order;
 
-Order create_order(char* name, float price, float discount, int quantity)
+Order order_create(char* name, float price, float discount, int quantity)
 {
     Order order;
     order.name = name;
@@ -19,10 +25,9 @@ Order create_order(char* name, float price, float discount, int quantity)
     return order;
 }
 
-void copy_order(Order* destination, Order* source)
+void order_copy(Order* destination, Order* source)
 {
-    //destination = (Order*)malloc(sizeof(Order));
-    strcpy(destination->name, source->name);
+    destination->name = source->name;
     destination->discount = source->discount;
     destination->price = source->price;
     destination->quantity = source->quantity;

@@ -1,3 +1,9 @@
+/**
+ * 
+ * Written by Sukhrobbek Ilyosbekov
+ * Source code available in https://github.com/suxrobGM/CCourseworkAssignments
+ * 
+ **/
 #ifndef BASE_FUNCTIONS_H_INCLUDED
 #define BASE_FUNCTIONS_H_INCLUDED
 
@@ -45,6 +51,11 @@ bool is_valid_name(const char* str)
 {
     bool is_valid = true;
     int str_length = strlen(str);
+
+    if (str[0] == ' ' || str[0] == '\n' || str[0] == '\0')
+    {
+        return false;
+    }
 
     for (size_t i = 0; i < str_length; i++)
     {

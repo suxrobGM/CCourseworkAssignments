@@ -1,3 +1,9 @@
+/**
+ * 
+ * Written by Sukhrobbek Ilyosbekov
+ * Source code available in https://github.com/suxrobGM/CCourseworkAssignments
+ * 
+ **/
 #include "vector.h"
 
 typedef struct Person 

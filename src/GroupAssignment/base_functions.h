@@ -1,3 +1,9 @@
+/**
+ * 
+ * Written by Sukhrobbek Ilyosbekov
+ * Source code available in https://github.com/suxrobGM/CCourseworkAssignments
+ * 
+ **/
 #ifndef BASE_FUNCTIONS_H_INCLUDED
 #define BASE_FUNCTIONS_H_INCLUDED
 
